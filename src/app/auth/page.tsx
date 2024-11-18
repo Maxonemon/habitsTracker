@@ -7,6 +7,7 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
+  User,
 } from "firebase/auth";
 import { useRouter } from "next/navigation";
 
@@ -14,7 +15,7 @@ import { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 
 export default function AuthPage() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<User | null>(null);
   const router = useRouter();
 
   const provider = new GoogleAuthProvider();
