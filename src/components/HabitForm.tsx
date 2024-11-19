@@ -55,7 +55,7 @@ export default function HabitForm() {
       toast.success("Habit added");
     } catch (error) {
       console.error("Error adding habit:", error);
-      toast.error("Error adding habit");
+      toast.error("Error adding habits");
     } finally {
       setIsSubmitting(false);
     }
