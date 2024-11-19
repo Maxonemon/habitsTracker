@@ -3,12 +3,13 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDWNzQ7vTdtoJ571MPunoC-fdr7LghNS3o",
-  authDomain: "habittracks-23a01.firebaseapp.com",
-  projectId: "habittracks-23a01",
-  storageBucket: "habittracks-23a01.firebasestorage.app",
-  messagingSenderId: "533339425992",
-  appId: "1:533339425992:web:5edcdb39867831724a69fd",
+  apiKey: "AIzaSyCyHLrotaS1MhdkfwHeGrx2Zhqmaql0ZZg",
+  authDomain: "habitstracker2.firebaseapp.com",
+  projectId: "habitstracker2",
+  storageBucket: "habitstracker2.firebasestorage.app",
+  messagingSenderId: "509807806376",
+  appId: "1:509807806376:web:9430942d09a4b0e769ff9d",
+  measurementId: "G-F4DV4KEKGX",
 };
 
 const app = initializeApp(firebaseConfig);
