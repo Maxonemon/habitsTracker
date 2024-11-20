@@ -1,15 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
 import { auth, db } from "@/lib/firebase";
 import {
   collection,
-  query,
-  where,
-  onSnapshot,
   deleteDoc,
   doc,
+  onSnapshot,
+  query,
   updateDoc,
+  where,
 } from "firebase/firestore";
+import { revalidatePath } from "next/cache";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import HabitCard from "./HabitCard";
 
@@ -50,6 +51,7 @@ export default function HabitList() {
         completedDates: [...habit.completedDates, new Date().toISOString()],
       });
       toast.success("Progress updated");
+      revalidatePath("/habits");
     } catch (error) {
       console.error("Error completing habit:", error);
       toast.error("Failed to update progress");
